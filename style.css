@@ -1,0 +1,52 @@
+body{
+    font-family: Georgia, "Times New Roman", Times, serif;
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+.container{
+    width: 50vw;
+    background-color: #006699;
+    border-radius: 1rem;
+    padding: 3rem;
+    border: 1px solid black;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form{
+    display: grid;
+    grid-template-columns: auto auto;
+    row-gap: 1rem;
+    column-gap: 3rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.title{
+    margin: 0;
+    text-align: center;
+}
+
+label{
+    font-weight: bold;
+}
+
+.character-amount-container{
+    display: flex;
+    align-items: center;
+}
+
+.number-input{
+    margin: 10px;
+    width: 2rem;
+}
