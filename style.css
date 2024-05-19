@@ -1,5 +1,6 @@
 body{
     font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 1.5rem;
     background-color: #333;
     color: white;
     display: flex;
@@ -54,11 +55,12 @@ label{
 .password-display{
     background-color: white;
     color: black;
+    font-size: 1.5rem;
     padding: 15px;
     border: 1px solid black;
     border-radius: .5rem;
     height: 2rem;
-    width: 350px;
+    width: 450px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -68,6 +70,7 @@ label{
 .generator-btn{
     grid-column: span 2;
     background-color: transparent;
+    font-size: 1.2rem;
     color: white;
     border: 2px solid white;
     padding: .5rem 1rem;
@@ -77,4 +80,27 @@ label{
 
 .generator-btn:hover{
     background-color: #FFFFFF33;
+}
+
+@media (max-width: 767px) {
+    .container {
+        width: 90vw;
+        padding: 2rem;
+    }
+
+    .form {
+        grid-template-columns: 1fr;
+        row-gap: 0.5rem;
+        column-gap: 0;
+    }
+
+    .password-display {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .generator-btn {
+        font-size: 1rem;
+        padding: 0.5rem 0.75rem;
+    }
 }
