@@ -1,6 +1,7 @@
 const rangeInputElement = document.getElementById("rangeInput");
 const numberInputElement = document.getElementById("numberInput");
 const form = document.getElementById("passwordGeneratorForm");
+const passwordDisplayElement = document.getElementById("passwordDisplay");
 
 const UPPERCASE_CHAR_CODES = arrayFromLowToHigh(65, 90);
 const LOWERCASE_CHAR_CODES = arrayFromLowToHigh(97, 122);
@@ -17,6 +18,7 @@ form.addEventListener("submit", event =>{
     const characterAmount = numberInputElement.value;
     console.log("character amount : " + characterAmount);
     const password = generatePassWord(characterAmount);
+    passwordDisplayElement.innerText = password;
     console.log("password length: " + password.length);
     console.log("password : " + password);
 
