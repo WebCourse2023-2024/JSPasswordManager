@@ -50,3 +50,31 @@ label{
     margin: 10px;
     width: 2rem;
 }
+
+.password-display{
+    background-color: white;
+    color: black;
+    padding: 15px;
+    border: 1px solid black;
+    border-radius: .5rem;
+    height: 2rem;
+    width: 20vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    word-break: break-all;
+}
+
+.generator-btn{
+    grid-column: span 2;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: .5rem 1rem;
+    font-weight: bold;
+    border-radius: 1rem;
+}
+
+.generator-btn:hover{
+    background-color: #FFFFFF33;
+}
