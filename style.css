@@ -15,7 +15,7 @@ body{
     background-color: #006699;
     border-radius: 1rem;
     padding: 3rem;
-    border: 1px solid black;
+    border: 2px solid black;
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
     display: flex;
     justify-content: center;
@@ -58,7 +58,7 @@ label{
     border: 1px solid black;
     border-radius: .5rem;
     height: 2rem;
-    width: 20vw;
+    width: 350px;
     display: flex;
     justify-content: center;
     align-items: center;
