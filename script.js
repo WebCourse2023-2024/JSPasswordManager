@@ -21,11 +21,9 @@ numberInputElement.addEventListener("input", syncCharacterAmount);
 form.addEventListener("submit", event => {
     event.preventDefault();
     const characterAmount = numberInputElement.value;
-    console.log("character amount : " + characterAmount);
     const password = generatePassWord(characterAmount);
     passwordDisplayElement.innerText = password;
-    console.log("password length: " + password.length);
-    console.log("password : " + password);
+    copyToClipboard(password);
 });
 
 /**
@@ -54,6 +52,36 @@ function generatePassWord(characterAmount) {
 
     return password.join('');
 }
+
+/**
+ * Copies the given text to the clipboard.
+ *
+ * @param {string} text - The text to be copied to the clipboard.
+ */
+function copyToClipboard(text) {
+    // Step 1: Create a textarea element
+    const textarea = document.createElement("textarea");
+
+    // Step 2: Set the textarea value to the provided text
+    textarea.value = text;
+
+    // Step 3: Ensure the textarea is invisible and positioned off-screen
+    textarea.style.position = "fixed";
+
+    // Step 4: Append the textarea to the document body
+    document.body.appendChild(textarea);
+
+    // Step 5: Focus on the textarea and select its content
+    textarea.focus();
+    textarea.select();
+
+    // Step 6: Execute the copy command to copy the selected text to the clipboard
+    document.execCommand("copy");
+
+    // Step 7: Remove the temporary textarea from the document body
+    document.body.removeChild(textarea);
+}
+
 
 /**
  * Generates an array of random characters from the given character code array.
