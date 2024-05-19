@@ -1,5 +1,6 @@
 body{
     font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 1.5rem;
     background-color: #333;
     color: white;
     display: flex;
@@ -15,7 +16,7 @@ body{
     background-color: #006699;
     border-radius: 1rem;
     padding: 3rem;
-    border: 1px solid black;
+    border: 2px solid black;
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
     display: flex;
     justify-content: center;
@@ -49,4 +50,63 @@ label{
 .number-input{
     margin: 10px;
     width: 2rem;
+}
+
+.password-display{
+    background-color: white;
+    color: black;
+    font-size: 1.5rem;
+    padding: 15px;
+    border: 1px solid black;
+    border-radius: .5rem;
+    height: 2rem;
+    width: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    word-break: break-all;
+}
+
+.generator-btn{
+    grid-column: span 2;
+    background-color: transparent;
+    font-size: 1.2rem;
+    color: white;
+    border: 2px solid white;
+    padding: .5rem 1rem;
+    font-weight: bold;
+    border-radius: 1rem;
+}
+
+.generator-btn:hover{
+    background-color: #FFFFFF33;
+}
+
+@media (max-width: 767px) {
+
+    body{
+        font-size: 1rem;
+    };
+    .container {
+        width: 90vw;
+        height: 100vh;
+        padding: 2rem;
+    }
+
+    .form {
+        grid-template-columns: 1fr;
+        row-gap: 0.5rem;
+        column-gap: 0;
+    }
+
+    .password-display {
+        width: 100%;
+        max-width: 100%;
+        font-size: 1rem;
+    }
+
+    .generator-btn {
+        font-size: 1rem;
+        padding: 0.5rem 0.75rem;
+    }
 }
